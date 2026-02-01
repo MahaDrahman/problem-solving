@@ -1,3 +1,4 @@
+
 /* Practice is the only shortcut */
 
 #include<bits/stdc++.h>
@@ -10,17 +11,13 @@ int32_t main(){
     cin.tie(nullptr);  cout.tie(nullptr);
 
     int n; cin >> n;
-    vector<int> lucky = {
-        4, 7, 44, 47, 74, 77, 444, 447, 474, 477, 744, 747, 777
-    };
-    bool mahadi = false;
-    for(auto x : lucky){
-        if(n % x == 0){
-            mahadi = true;
-        }
+    int array[n];
+    ll sub = 0;
+    for(int i = 0; i < n; i++){
+      cin >> array[i];
+      sub -= array[i];
     }
-    if(mahadi) cout << "YES" <<endl;
-    else cout << "NO" <<endl;
+    cout << sub <<endl;
 
     return 0;
 }
